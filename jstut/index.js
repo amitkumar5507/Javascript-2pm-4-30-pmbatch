@@ -103,7 +103,7 @@ function rightAngle(n){
   }
   console.log(str)
 }
-rightAngle(4)
+// rightAngle(5)
 
 
 function rect(n){
@@ -153,11 +153,156 @@ function reverseTri(n){
         str+=" "
     }
     for(let k=1;k<=i;k++){
-      str+="X"
+      str+="X "
     }
   str+="\n"
   }
   console.log(str)
 }
-reverseTri(5)
+// reverseTri(5)
+
+function pyramid(n){
+    let str=""
+    let count =1
+    for(let i= 1;i<=n;i++){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=2*i-1;num++ ){
+            str+=`${num} `
+            count++
+        }
+        str+="\n"
+    }
+    console.log(str);
+    
+}
+
+function pyramidHollow(n){
+    let str=""
+    for(let i= 1;i<=n;i++){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=2*i-1;num++ ){
+            if(num==1|| num == (2*i)-1 || i ===n ){
+                str+=`*`
+            }
+            else{
+                str+=' '
+            }
+        }
+        str+="\n"
+    }
+    console.log(str);
+}
+function reversePyramid(n){
+    let str=""
+    for(let i=n;i>=1;i--){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=((2*i)-1);num++ ){
+            str+=`*`
+        }
+        str+="\n"
+    }
+    console.log(str);
+}
+
+function reversePyramid(n){
+    let str=""
+    for(let i=n;i>=1;i--){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=((2*i)-1);num++ ){
+            if(num==1|| num == (2*i)-1 || i ===n ){
+                str+=`*`
+            }
+            else{
+                str+=" "
+            }
+        }
+        str+="\n"
+    }
+    console.log(str);
+}
+reversePyramid(5)
+
+
+function Diamond(n){
+    let str=""
+    for(let i= 1;i<=n;i++){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=2*i-1;num++ ){
+            if(num==1|| num == (2*i)-1  ){
+                str+=`*`
+            }
+            else{
+                str+=' '
+            }
+        }
+        str+="\n"
+    }
+
+    for(let i=n;i>=1;i--){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=((2*i)-1);num++ ){
+            if(num==1|| num == (2*i)-1 || i==n ){
+                str+=`*`
+            }
+            else{
+                str+=" "
+            }
+        }
+        str+="\n"
+    }
+    console.log(str);
+
+}
+Diamond(5)
+
+
+function hourGlass(n){
+    let str=""
+    
+    for(let i=n;i>=1;i--){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=((2*i)-1);num++ ){
+            if(num==1|| num == (2*i)-1  ){
+                str+=`*`
+            }
+            else{
+                str+=" "
+            }
+        }
+        str+="\n"
+    }
+    for(let i= 2;i<=n;i++){ //row outer loop
+        for(let space = 1;space<=n-i;space++){ //print space
+            str+=' ';
+        }
+        for(let num=1;num<=2*i-1;num++ ){
+            if(num==1|| num == (2*i)-1   ){
+                str+=`*`
+            }
+            else{
+                str+=' '
+            }
+        }
+        str+="\n"
+    }
+    console.log(str);
+
+}
+hourGlass(5)
+
+// pyramidHollow(5)
 
