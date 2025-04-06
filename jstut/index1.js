@@ -152,6 +152,55 @@ console.log(arr.map((val)=>{
 
 // console.log(arr.includes(5,10));
 
+// let arrr =[1,2,3,14];
+// console.log(arrr.reverse());
+// console.log(arrr.some((val)=>val>10));
+
+function twoSum(arr,target){
+  let map = new Map();
+  for(let i =0; i< arr.length;i++){
+    const complement = target - arr[i];
+    if(map.has(complement)){
+      return [complement,arr[i]]
+    }
+    map.set(arr[i],i);
+    console.log(map);
+    
+  }
+  return null
+}
+
+console.log(twoSum([2,3,2,6,5,5],10));
+
+function findProd(arr){
+  arr.sort((a,b)=>b-a)
+  return arr.slice(0,2)
+} 
+console.log(findProd([-1,-2,3,5,7]));
+
+// [1,1,1,1,2,2,2,3,3,3,3]
+// 1=4
+// 2=3
+// 3=4
+
+function duplicate(arr){
+  let obj = {}
+  for(let i of arr){
+    if(!obj.hasOwnProperty(i)){
+        obj[i] = 1
+    }
+    else{
+      obj[i]+=1
+    }
+  }
+  return obj
+
+}
+
+console.log(duplicate([1,1,1,1,2,2,3,3,3]));
+
+
+
 
 
 
